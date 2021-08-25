@@ -1,0 +1,242 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 4vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.fakeimg {
+  height: 200px;
+  width: 100%;
+  background: #aaa;
+}
+
+/* /// */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container img {
+  width: 100%;
+  height: 250px;
+}
+
+.container .btn {
+  position: initial;
+  top: 79%;
+  left: 37%;
+  transform: translate(21%, -124%);
+  -ms-transform: translate(-50%, -60%);
+  background-color: rgb(226, 28, 28);
+  color: rgb(245, 243, 243);
+  font-size: 14px;
+  padding: 9px 55px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: rgb(214, 32, 32);
+}
+.bghitachi{
+  width: 100%;
+  height: auto;
+}
+
+
+.cake{
+  position:absolute;
+  top:50%; left:50%;
+  margin-left:-50; margin-top:-50;
+  width:100; height:100;
+}
+
+/* ============================================== BASE
+*/
+
+.cake:after{
+  background:rgba(235,227,225,1);
+  border-radius:100;
+  content:"";
+  position:absolute;
+  bottom:0; left:0;
+  width:100; height:2;
+}
+
+.cake:before{
+
+}
+
+/* ============================================== Candle
+*/
+
+.velas{
+  background:rgba(255,255,255,1);
+  border-radius:100%;
+  position:absolute;
+  top:50%; left:50%;
+  margin-left:-2.5;
+  margin-top:-8;
+  width:5; height:17;
+}
+
+.velas:after,
+.velas:before{
+  background:rgba(255,0,0,0.4);
+  content:"";
+  position:absolute;
+  width:100%; height:2.2;
+}
+
+.velas:after{
+  top:25%; left:0;
+}
+
+.velas:before{
+  top:45%; left:0;
+}
+
+/* ============================================== Fire
+*/
+
+.fuego{
+  border-radius:100%;
+  box-shadow:0 0 40px 10px rgba(248,233,209,0.2);
+  position:absolute;
+  top:-12px; left:50%;
+  margin-left:-3;
+  /*margin-top:-5; */
+  width:3; height:12.5;
+}
+
+.fuego:nth-child(1){
+  animation:fuego 2s infinite;
+}
+
+.fuego:nth-child(2){
+  animation:fuego 1.5s infinite;
+}
+
+.fuego:nth-child(3){
+  animation:fuego 1s infinite;
+}
+
+.fuego:nth-child(4){
+  animation:fuego 0.5s infinite;
+}
+
+.fuego:nth-child(5){
+  animation:fuego 0.2s infinite;
+}
+
+/* ============================================== Animation Fire
+*/
+
+@keyframes fuego{
+  0%{
+    background:rgba(254,248,97,0.5);
+    transform:translateY(0) scale(1);
+  }
+  50%{
+    background:rgba(255,50,0,0.1);
+    transform:translateY(-20) scale(0);
+  }
+  100%{
+    background:rgba(254,248,97,0.5);
+    transform:translateY(0) scale(1);
+  }
+}
+
+/* ============================================== Frosting
+*/
+
+.cobertura{
+  background:rgba(236,231,227,1);
+  border-radius:50;
+  position:absolute;
+  top:60%;
+  left:50%;
+  margin-left:-28;
+  margin-top:-5;
+  width:56; height:20;
+  z-index:10;
+}
+
+.cobertura:after,
+.cobertura:before{
+  background:rgba(236,231,227,1);
+  border-radius:100px;
+  content:"";
+  position:absolute;
+  width:5; height:10;
+}
+
+.cobertura:after{
+  top:7; right:14;
+}
+
+.cobertura:before{
+  top:10; right:9;
+}
+
+/* ============================================== BIZCOCHO
+*/
+
+.bizcocho{
+  background:rgba(109,56,38,1);
+  position:absolute;
+  bottom:0; left:50%;
+  margin-left:-25;
+  width:50; height:50;
+}
+
+.bizcocho:after,
+.bizcocho:before{
+  background:rgba(236,231,227,0.6);
+  content:"";
+  position:absolute;
+  width:100%; height:5;
+}
+
+.bizcocho:after{
+  top:30%; left:0;
+}
+
+.bizcocho:before{
+  top:60%; left:0;
+}

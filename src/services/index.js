@@ -1,0 +1,1 @@
+export {getPrize} from './prizeServices'
